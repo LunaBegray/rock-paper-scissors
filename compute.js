@@ -66,25 +66,25 @@ if(won === true){
 }
 }
 
-
+/*
 const playerSelection = "rock";
 const computerSelection = computerPlay();
-console.log(playRound(playerSelection, computerSelection)); 
-/*
+console.log(playRound(playerSelection, computerSelection));  */
+
 function game(){
-let playerSelection = ""; 
-    for(i = 0; i < 5; i++){
-        let windowC = prompt("Choose either paper, scissors or rock");
-        if (windowC.toLowerCase() == "paper") {
-            playerSelection = "paper";
-        }else if (windowC.toLowerCase() == "rock") {
-            playerSelection = "rock";
-        }else if (windowC.toLowerCase() == "scissors") {
-            playerSelection = "scissors";
+    let playerSelection = ""; 
+        for(i = 0; i < 5; i++){
+            let windowC = prompt("Choose either paper, scissors or rock");
+            if (windowC.toLowerCase() == "paper") {
+                playerSelection = "paper";
+            }else if (windowC.toLowerCase() == "rock") {
+                playerSelection = "rock";
+            }else if (windowC.toLowerCase() == "scissors") {
+                playerSelection = "scissors";
+            }
+            let computerSelection = computerPlay();
+            let result = playRound(playerSelection, computerSelection);
+            console.log(result)
         }
-        let computerSelection = computerPlay();
-        console.log(playRound(playerSelection, computerSelection));
     }
-}
-game(); 
-*/
+game();
