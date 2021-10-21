@@ -66,11 +66,22 @@ if(won === true){
 }
 }
 
-/*
-const playerSelection = "rock";
-const computerSelection = computerPlay();
-console.log(playRound(playerSelection, computerSelection));  */
+const btnPaper = document.querySelector('.paper');
+btnPaper.addEventListener('click', () => {
+    const playerSelection = "paper";
+});
+const btnScissors = document.querySelector('.scissors');
+btnScissors.addEventListener('click', () => {
+    const playerSelection = "scissors";
+});
+const btnRock = document.querySelector('.rock');
+btnRock.addEventListener('click', () => {
+    const playerSelection = "rock";
+});
 
+const computerSelection = computerPlay();
+console.log(playRound(playerSelection, computerSelection)); 
+/*
 function game(){
     let playerSelection = ""; 
         for(i = 0; i < 5; i++){
@@ -88,3 +99,4 @@ function game(){
         }
     }
 game();
+*/
