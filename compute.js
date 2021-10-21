@@ -67,13 +67,13 @@ if(won === true){
 }
 const resultRect = document.createElement('div');
 const btnPaper = document.querySelector('.paper');
-const body = document.querySelector('body')
+const body = document.querySelector('body');
 btnPaper.addEventListener('click', () => {
     const playerSelection = "paper";
     const computerSelection = computerPlay();
     const aRoundResult = playRound(playerSelection, computerSelection); 
     resultRect.textContent = aRoundResult;
-    body.appendChild(resultRect)
+    body.appendChild(resultRect);
 });
 const btnScissors = document.querySelector('.scissors');
 btnScissors.addEventListener('click', () => {
@@ -81,7 +81,7 @@ btnScissors.addEventListener('click', () => {
     const computerSelection = computerPlay();
     const aRoundResult = playRound(playerSelection, computerSelection); 
     resultRect.textContent = aRoundResult;
-    body.appendChild(resultRect)
+    body.appendChild(resultRect);
 });
 const btnRock = document.querySelector('.rock');
 btnRock.addEventListener('click', () => {
@@ -89,7 +89,7 @@ btnRock.addEventListener('click', () => {
     const computerSelection = computerPlay();
     const aRoundResult = playRound(playerSelection, computerSelection); 
     resultRect.textContent = aRoundResult;
-    body.appendChild(resultRect)
+    body.appendChild(resultRect);
 });
 
 /*
