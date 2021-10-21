@@ -69,18 +69,22 @@ if(won === true){
 const btnPaper = document.querySelector('.paper');
 btnPaper.addEventListener('click', () => {
     const playerSelection = "paper";
+    const computerSelection = computerPlay();
+    console.log(playRound(playerSelection, computerSelection)); 
 });
 const btnScissors = document.querySelector('.scissors');
 btnScissors.addEventListener('click', () => {
     const playerSelection = "scissors";
+    const computerSelection = computerPlay();
+    console.log(playRound(playerSelection, computerSelection)); 
 });
 const btnRock = document.querySelector('.rock');
 btnRock.addEventListener('click', () => {
     const playerSelection = "rock";
+    const computerSelection = computerPlay();
+    console.log(playRound(playerSelection, computerSelection)); 
 });
 
-const computerSelection = computerPlay();
-console.log(playRound(playerSelection, computerSelection)); 
 /*
 function game(){
     let playerSelection = ""; 
