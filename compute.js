@@ -67,6 +67,7 @@ if(won === true){
 }
 const resultRect = document.createElement('div');
 const btnPaper = document.querySelector('.paper');
+const body = document.querySelector('body')
 btnPaper.addEventListener('click', () => {
     const playerSelection = "paper";
     const computerSelection = computerPlay();
