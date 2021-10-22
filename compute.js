@@ -67,7 +67,7 @@ function playRound(playerSelection, computerSelection) {
     if(draw === true){
         countD = countD + 1;
     }
-    const resultView = document.qureySelector('.resultView');
+    const resultView = document.querySelector('.resultView');
     resultView.textContent = 'Results! won: ' +countW +', lost: ' +countL +', draw: ' +countD;
 
     let messageWin = "you won! " + winnerC + " beats" + loserC;
