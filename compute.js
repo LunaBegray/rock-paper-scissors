@@ -5,6 +5,9 @@ let Cchoice = Cpchoices[Cdecide]
 console.log(Cchoice)
     return Cchoice
 }
+let countW = 0;
+let countL = 0;
+let countD = 0;
 
 function playRound(playerSelection, computerSelection) {
     playerSelection.toLowerCase();
@@ -55,9 +58,7 @@ function playRound(playerSelection, computerSelection) {
         lost = true;
     }
 
-    let countW = 0;
-    let countL = 0;
-    let countD = 0;
+
     if(won === true){
         countW = countW + 1;
     }
