@@ -64,7 +64,7 @@ function playRound(playerSelection, computerSelection) {
     } else if (draw === true){
         return messageDraw
     }
-    const resultView = document.quereySelector('.resultView');
+
     let countW = 0;
     let countL = 0;
     let countD = 0;
@@ -77,7 +77,8 @@ function playRound(playerSelection, computerSelection) {
     if(draw === true){
         countD = countD + 1;
     }
-    resultView.textContent = 'Results! won: ' +countW +', lost: ' +countL +', draw: ' +countD;
+    const resultView = document.quereySelector('.resultView');
+    resultView.textContent += 'Results! won: ' +countW +', lost: ' +countL +', draw: ' +countD;
 }
 const resultRect = document.createElement('div');
 const btnPaper = document.querySelector('.paper');
