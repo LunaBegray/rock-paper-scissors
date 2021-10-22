@@ -57,7 +57,17 @@ function playRound(playerSelection, computerSelection) {
         loserC = playerSelection;
         lost = true;
     }
-
+    let finalMessageL = "you lost the game!";
+    let finalMessageW = "you won the game!";
+    let finalMessageR = "";
+    if(countL > 4){
+        finalMessageR = finalMessageL;
+    }
+    if(countW > 4){
+        finalMessageR = finalMessageW;
+    }
+    const finalResultBox = document.querySelector('.finalResultBox')
+    finalResultBox.textContent = finalMessageR;
 
     if(won === true){
         countW = countW + 1;
@@ -70,7 +80,7 @@ function playRound(playerSelection, computerSelection) {
     }
     const resultView = document.querySelector('.resultView');
     resultView.textContent = 'Results! won: ' +countW +', lost: ' +countL +', draw: ' +countD;
-
+    
     let messageWin = "you won! " + winnerC + " beats" + loserC;
     let messageLost = "you lost! " + winnerC + " beats" + loserC;
     let messageDraw = "Its a draw!";
@@ -81,7 +91,6 @@ function playRound(playerSelection, computerSelection) {
     } else if (draw === true){
         return messageDraw
     }
-
 }
 const resultRect = document.createElement('div');
 const btnPaper = document.querySelector('.paper');
