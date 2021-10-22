@@ -54,6 +54,22 @@ function playRound(playerSelection, computerSelection) {
         loserC = playerSelection;
         lost = true;
     }
+
+    let countW = 0;
+    let countL = 0;
+    let countD = 0;
+    if(won === true){
+        countW = countW + 1;
+    }
+    if(lost === true){
+        countL = countL + 1;
+    }
+    if(draw === true){
+        countD = countD + 1;
+    }
+    const resultView = document.qureySelector('.resultView');
+    resultView.textContent = 'Results! won: ' +countW +', lost: ' +countL +', draw: ' +countD;
+
     let messageWin = "you won! " + winnerC + " beats" + loserC;
     let messageLost = "you lost! " + winnerC + " beats" + loserC;
     let messageDraw = "Its a draw!";
@@ -64,30 +80,17 @@ function playRound(playerSelection, computerSelection) {
     } else if (draw === true){
         return messageDraw
     }
+
 }
 const resultRect = document.createElement('div');
 const btnPaper = document.querySelector('.paper');
 const body = document.querySelector('body');
-const resultView = document.qureySelector('.resultView');
-let countW = 0;
-let countL = 0;
-let countD = 0;
 btnPaper.addEventListener('click', () => {
     const playerSelection = "paper";
     const computerSelection = computerPlay();
     const aRoundResult = playRound(playerSelection, computerSelection); 
     resultRect.textContent = aRoundResult;
     body.appendChild(resultRect);
-    if(won === true){
-        countW = countW + 1;
-    }
-    if(lost === true){
-        countL = countL + 1;
-    }
-    if(draw === true){
-        countD = countD + 1;
-    }
-    resultView.textContent = 'Results! won: ' +countW +', lost: ' +countL +', draw: ' +countD;
 });
 const btnScissors = document.querySelector('.scissors');
 btnScissors.addEventListener('click', () => {
@@ -96,16 +99,6 @@ btnScissors.addEventListener('click', () => {
     const aRoundResult = playRound(playerSelection, computerSelection); 
     resultRect.textContent = aRoundResult;
     body.appendChild(resultRect);
-    if(won === true){
-        countW = countW + 1;
-    }
-    if(lost === true){
-        countL = countL + 1;
-    }
-    if(draw === true){
-        countD = countD + 1;
-    }
-    resultView.textContent = 'Results! won: ' +countW +', lost: ' +countL +', draw: ' +countD;
 });
 const btnRock = document.querySelector('.rock');
 btnRock.addEventListener('click', () => {
@@ -114,16 +107,6 @@ btnRock.addEventListener('click', () => {
     const aRoundResult = playRound(playerSelection, computerSelection); 
     resultRect.textContent = aRoundResult;
     body.appendChild(resultRect);
-    if(won === true){
-        countW = countW + 1;
-    }
-    if(lost === true){
-        countL = countL + 1;
-    }
-    if(draw === true){
-        countD = countD + 1;
-    }
-    resultView.textContent = 'Results! won: ' +countW +', lost: ' +countL +', draw: ' +countD;
 });
 
 
