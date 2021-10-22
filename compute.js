@@ -54,8 +54,8 @@ if((computerSelection === "paper") && (playerSelection === "rock")) {
     loserC = playerSelection;
     lost = true;
 }
-let messageWin = "you won!" + winnerC + "beats" + loserC;
-let messageLost = "you lost!" + winnerC + "beats" + loserC;
+let messageWin = "you won! " + winnerC + " beats" + loserC;
+let messageLost = "you lost! " + winnerC + " beats" + loserC;
 let messageDraw = "Its a draw!";
 if(won === true){
  return messageWin
@@ -91,6 +91,21 @@ btnRock.addEventListener('click', () => {
     resultRect.textContent = aRoundResult;
     body.appendChild(resultRect);
 });
+const resultView = document.quereySelector('.resultView')
+let countW = 0;
+let countL = 0;
+let countD = 0;
+if(won === true){
+    countW = countW + 1;
+}
+if(lost === true){
+    countL = countL + 1;
+}
+if(draw === true){
+    countD = countD + 1;
+}
+resultView.textContent = 'won: ' +countW +', lost: ' +countL +', draw: ' +countD;
+body.appendChikd(resultView);
 
 /*
 function game(){
