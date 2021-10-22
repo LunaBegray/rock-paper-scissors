@@ -64,6 +64,21 @@ if(won === true){
 } else if (draw === true){
     return messageDraw
 }
+const resultView = document.quereySelector('.resultView');
+let countW = 0;
+let countL = 0;
+let countD = 0;
+if(won === true){
+    countW = countW + 1;
+}
+if(lost === true){
+    countL = countL + 1;
+}
+if(draw === true){
+    countD = countD + 1;
+}
+resultView.textContent = 'won: ' +countW +', lost: ' +countL +', draw: ' +countD;
+body.appendChild(resultView);
 }
 const resultRect = document.createElement('div');
 const btnPaper = document.querySelector('.paper');
@@ -91,21 +106,7 @@ btnRock.addEventListener('click', () => {
     resultRect.textContent = aRoundResult;
     body.appendChild(resultRect);
 });
-const resultView = document.quereySelector('.resultView')
-let countW = 0;
-let countL = 0;
-let countD = 0;
-if(won === true){
-    countW = countW + 1;
-}
-if(lost === true){
-    countL = countL + 1;
-}
-if(draw === true){
-    countD = countD + 1;
-}
-resultView.textContent = 'won: ' +countW +', lost: ' +countL +', draw: ' +countD;
-body.appendChikd(resultView);
+
 
 /*
 function game(){
