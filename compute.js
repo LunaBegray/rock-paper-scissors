@@ -64,10 +64,20 @@ function playRound(playerSelection, computerSelection) {
     } else if (draw === true){
         return messageDraw
     }
-
-    let countW = 0;
-    let countL = 0;
-    let countD = 0;
+}
+const resultRect = document.createElement('div');
+const btnPaper = document.querySelector('.paper');
+const body = document.querySelector('body');
+const resultView = document.quereySelector('.resultView');
+let countW = 0;
+let countL = 0;
+let countD = 0;
+btnPaper.addEventListener('click', () => {
+    const playerSelection = "paper";
+    const computerSelection = computerPlay();
+    const aRoundResult = playRound(playerSelection, computerSelection); 
+    resultRect.textContent = aRoundResult;
+    body.appendChild(resultRect);
     if(won === true){
         countW = countW + 1;
     }
@@ -77,18 +87,7 @@ function playRound(playerSelection, computerSelection) {
     if(draw === true){
         countD = countD + 1;
     }
-    const resultView = document.quereySelector('.resultView');
-    resultView.textContent += 'Results! won: ' +countW +', lost: ' +countL +', draw: ' +countD;
-}
-const resultRect = document.createElement('div');
-const btnPaper = document.querySelector('.paper');
-const body = document.querySelector('body');
-btnPaper.addEventListener('click', () => {
-    const playerSelection = "paper";
-    const computerSelection = computerPlay();
-    const aRoundResult = playRound(playerSelection, computerSelection); 
-    resultRect.textContent = aRoundResult;
-    body.appendChild(resultRect);
+    resultView.textContent = 'Results! won: ' +countW +', lost: ' +countL +', draw: ' +countD;
 });
 const btnScissors = document.querySelector('.scissors');
 btnScissors.addEventListener('click', () => {
@@ -97,6 +96,16 @@ btnScissors.addEventListener('click', () => {
     const aRoundResult = playRound(playerSelection, computerSelection); 
     resultRect.textContent = aRoundResult;
     body.appendChild(resultRect);
+    if(won === true){
+        countW = countW + 1;
+    }
+    if(lost === true){
+        countL = countL + 1;
+    }
+    if(draw === true){
+        countD = countD + 1;
+    }
+    resultView.textContent = 'Results! won: ' +countW +', lost: ' +countL +', draw: ' +countD;
 });
 const btnRock = document.querySelector('.rock');
 btnRock.addEventListener('click', () => {
@@ -105,6 +114,16 @@ btnRock.addEventListener('click', () => {
     const aRoundResult = playRound(playerSelection, computerSelection); 
     resultRect.textContent = aRoundResult;
     body.appendChild(resultRect);
+    if(won === true){
+        countW = countW + 1;
+    }
+    if(lost === true){
+        countL = countL + 1;
+    }
+    if(draw === true){
+        countD = countD + 1;
+    }
+    resultView.textContent = 'Results! won: ' +countW +', lost: ' +countL +', draw: ' +countD;
 });
 
 
