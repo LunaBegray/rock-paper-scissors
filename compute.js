@@ -68,7 +68,7 @@ function playRound(playerSelection, computerSelection) {
 const resultRect = document.createElement('div');
 const btnPaper = document.querySelector('.paper');
 const body = document.querySelector('body');
-const resultView = document.quereySelector('.resultView');
+const resultView = document.qureySelector('.resultView');
 let countW = 0;
 let countL = 0;
 let countD = 0;
